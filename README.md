@@ -8,7 +8,7 @@
 - 우리 온라인 쇼핑몰의 구매 전환율은 어떻게 되는지, 그리고 전환율과 매출을 올리기 위해서 어떤 방법을 시도해볼 수 있는지 고객 행동 데이터를 통해 알아보고자 함
 
 ## 1.2. 데이터 소개
-- 캐글 출처, 중동국가 한 이커머스의 2019년 11월 한 달 간의 고객 행동에 대한 로그 데이터
+- 캐글 출처, 중동국가 한 이커머스의 2019년 11월 한 달 간의 고객 행동에 대한 로그 데이터(8.38GB)
   https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
 - 제품에 대한 행동, 제품에 대한 정보로 약 6,700만 개의 행으로 구성되어 있음
 ![image](https://user-images.githubusercontent.com/110115061/220956537-9d55e972-03c6-4eb7-8fed-a5cf428d32bc.png)
