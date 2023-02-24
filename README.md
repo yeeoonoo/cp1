@@ -139,8 +139,7 @@
 ### 4.2.1 컨텐츠 기반 추천 시스템
 - 상품의 카테고리, 브랜드, 가격 정보를 활용하여 유사한 아이템을 추천하는 시스템
 - 카테고리와 브랜드 데이터는 TF-IDF 활용, 가격 데이터 정규화(min-max scaling)
-- 총 69,773개의 아이템 2,159개의 특징 컬럼 -> 100개의 특징으로 PCA(메모리 절감, 속도 향상) 후 벡터화  
-![image](https://user-images.githubusercontent.com/110115061/220995285-99657a4c-3a18-4eca-830e-79a8797c036a.png) 
+- 총 69,773개의 아이템 2,159개의 특징 컬럼 -> 100개의 특징으로 PCA(메모리 절감, 속도 향상) 후 벡터화
 - 벡터 유사도 검색으로 상품 간 유사도 측정 : annoy 라이브러리 활용(Approximate Nearest Neighbors)   
 ![image](https://user-images.githubusercontent.com/110115061/220995347-edc8bbb0-8b7b-42dd-ab94-cac9dd6e66a8.png)
 
@@ -168,8 +167,7 @@
 - factors = 30, regularization = 0.1, alpha = 40, iterations = 30
 - 전체 matrix에서 20% 구매기록을 가린 훈련 데이터로 학습하였음
 - 30회 학습 시 loss = 0.000998
-- 평가 : 전체 330,394명의 고객에 대한 precision@15 = 0.028
-
+- 평가 : 전체 330,394명의 고객에 대한 precision@15 = 0.028  
 ![image](https://user-images.githubusercontent.com/110115061/220997341-27dce8e1-78f9-4609-97f4-05f67e0dad0a.png)  
 
 ![image](https://user-images.githubusercontent.com/110115061/220997538-707d8b1e-6e69-48aa-a30e-086177bd2f6b.png)  
