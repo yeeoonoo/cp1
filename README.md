@@ -110,7 +110,7 @@
   11월 16일과 17일로,요일로 환산하면 주말에 해당함
   
 #### ※ 쿠폰 발행 및 기타 이벤트를 보다 효과적으로 진행하기 위해서 고객 행동이 활발한 매월 중순 주말, 시간대는 06시~15시 시간대를 고려하여 진행하는 것을 추천함
-#### ※ 데이터 대쉬보드 링크 : https://datastudio.google.com/reporting/cdc3d21d-615e-49b0-aa9d-8f9229d0efda**
+#### ※ 데이터 대시보드 링크 : https://datastudio.google.com/reporting/cdc3d21d-615e-49b0-aa9d-8f9229d0efda**
 
 
 
@@ -134,30 +134,14 @@
 
 <br/>
 
-## 4.2. 추천 시스템 학습을 위한 side project 진행
-- movielens 100k 데이터를 활용하여 추천 시스템 구현
-- 모델
-  - 컨텐츠기반 추천 시스템
-  - 아이템 기반 협업 필터링
-  - Matrix Factorization을 활용한 협업필터링
-- 스킬셋
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - pytorch 
+## 4.2. 이커머스 데이터 추천 시스템 구현
 
-<br/>
-
-## 4.3. 이커머스 데이터 추천 시스템 구현
-
-### 4.3.1 컨텐츠 기반 추천 시스템
+### 4.2.1 컨텐츠 기반 추천 시스템
 - 상품의 카테고리, 브랜드, 가격 정보를 활용하여 유사한 아이템을 추천하는 시스템
 - 카테고리와 브랜드 데이터는 TF-IDF 활용, 가격 데이터 정규화(min-max scaling)
-- 총 69,773개의 아이템 2,159개의 특징 컬럼 -> 100개의 특징으로 PCA(메모리 절감, 속도 향상) 후 벡터화
-- 벡터 유사도 검색으로 상품 간 유사도 측정 : annoy 라이브러리 활용(Approximate Nearest Neighbors)
-
-![image](https://user-images.githubusercontent.com/110115061/220995285-99657a4c-3a18-4eca-830e-79a8797c036a.png)  
+- 총 69,773개의 아이템 2,159개의 특징 컬럼 -> 100개의 특징으로 PCA(메모리 절감, 속도 향상) 후 벡터화  
+![image](https://user-images.githubusercontent.com/110115061/220995285-99657a4c-3a18-4eca-830e-79a8797c036a.png) 
+- 벡터 유사도 검색으로 상품 간 유사도 측정 : annoy 라이브러리 활용(Approximate Nearest Neighbors)   
 ![image](https://user-images.githubusercontent.com/110115061/220995347-edc8bbb0-8b7b-42dd-ab94-cac9dd6e66a8.png)
 
 #### 구현 결과
@@ -170,15 +154,15 @@
 #### ※ 하지만 유사한 아이템만 결과로 나와서 추천 시스템의 우연성(Serendipity)이 없는 것으로 보임. 컨텐츠 기반 추천 시스템 단독으로 고객에게 상품을 추천, 구매 욕구를 자극하기엔 조금 부족함
 
 
-### 4.3.2 Matrix Factorization을 이용한 ALS 기반 협업 필터링
+### 4.2.2 Matrix Factorization을 이용한 ALS 기반 협업 필터링
 - 고객들이 실제로 구매한 상품 데이터를 기반으로 행렬분해를 이용한 추천 시스템
 - 구매 기록이 명시적이진 않지만 암시적으로 상품에 대한 선호도를 의미한다고 추론
-- 행렬 분해를 통해 고객-상품 간 숨겨진 요소값을 찾아내, 상품 추천에 활용
+- 행렬 분해를 통해 고객-상품 간 숨겨진 요소값을 찾아내, 상품 추천에 활용  
+![image](https://user-images.githubusercontent.com/110115061/220996588-f08bf693-3bde-4744-924a-cf60d09e5cac.png)  
 - 총 330,394명의 고객이 구매한 20,772개의 상품 506,950건의 정보를 활용
 - 20,772 x 330,394의 희소 행렬 구성 : sparsity 99.9%, 메모리 효율을 위해 CSR 행렬 구성
 
-![image](https://user-images.githubusercontent.com/110115061/220996588-f08bf693-3bde-4744-924a-cf60d09e5cac.png)  
-![image](https://user-images.githubusercontent.com/110115061/220996628-d2bb7b79-5f8b-4968-bd0b-3ae005c362d9.png)
+ 
 
 #### 구현 결과
 - factors = 30, regularization = 0.1, alpha = 40, iterations = 30
@@ -198,7 +182,7 @@
 
 <br/>
 
-## 4.4. 추천 시스템 적용 예시
+## 4.3. 추천 시스템 적용 예시
 ![image](https://user-images.githubusercontent.com/110115061/220998024-8ef738eb-0188-433d-9ad0-05b4cdca55e7.png)
 
 - 예시처럼 다양한 관점으로 상품을 추천하는 것이 좋아 보임
