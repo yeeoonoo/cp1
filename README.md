@@ -111,7 +111,7 @@
   11월 16일과 17일로,요일로 환산하면 주말에 해당함
   
 #### ※ 쿠폰 발행 및 기타 이벤트를 보다 효과적으로 진행하기 위해서 고객 행동이 활발한 매월 중순 주말, 시간대는 06시~15시 시간대를 고려하여 진행하는 것을 추천함
-#### ※ 데이터 대시보드 링크 : https://datastudio.google.com/reporting/cdc3d21d-615e-49b0-aa9d-8f9229d0efda**
+#### ※ 데이터 대시보드 링크 : https://datastudio.google.com/reporting/cdc3d21d-615e-49b0-aa9d-8f9229d0efda
 
 
 
