@@ -77,7 +77,7 @@
 <br/>
 
 ## 3.2. 고객 행동 지표 세부 분석
-![image](https://user-images.githubusercontent.com/110115061/221243608-13eec9fd-4ed1-483c-be68-d190fa9c5d79.png)  
+![image](https://user-images.githubusercontent.com/110115061/227948459-18a5b748-6aa2-42ba-976c-6029cd73f139.png)  
 - 유저 방문(view) 건 수에 비해 장바구니(cart)나 구매(purchase) 건 수가 매우 적었으나, 실제 카테고리와 브랜드,
   그리고 상품 상위 10개의 통계를 보면 품목이 매우 유사한 것을 알 수 있음
 - 각 분야 상위 3~5개는 모두 전체 집계량의 과반을 넘어 70% 이상의 양상을 보이고 있으며, 특히 전자제품과 가전제품의 비중이 매우 큰 것을 알 수 있음  
